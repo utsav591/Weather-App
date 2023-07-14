@@ -9,7 +9,7 @@ function App() {
 
   const apikey = '702aa8dc53cca4fab53040d6349571b3';
   
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=${apikey}`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=${apikey}`;
 
   
   const searchLocation =(event)=>{
@@ -53,7 +53,7 @@ function App() {
             <p>{data.name}</p>
           </div>
           <div className="temp">
-            {data.main ? <h1>{data.main.temp.toFixed()}°F</h1> : null}
+            {data.main ? <h1>{data.main.temp.toFixed()}°C</h1> : null}
           </div>
           <div className="description">
           {data.weather ? <p>{data.weather[0].description}</p> : null}
